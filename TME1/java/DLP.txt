@@ -1,0 +1,38 @@
+Ajouter une primitive :
+    Interpreter :
+    - Ajouter les classes dans un dossier Interpreter/primitive elles extends Primitive ou UnaryPrimitive
+        Methode apply sert à renvoyer ce que l'on veut par exemple pour Sinus on renvoie                    Math.sin(n.doubleValue())
+        
+    - Modifier le fichier GlobalVariableStuff.java
+    - Modifier InterpreterTest.java
+    
+    Compiler :
+    - Modifier ilp.c et ilp.h et ajouter dans /C
+    - ajouter dans le /C le fichier compileThen Run.sh
+    - Modifier GlobalVariableStuff.java
+    - Modifier CompilerTest.java
+    
+
+Entendre le langage avec xxx :
+    - Compléter la grammaire
+    
+    -Ajouter :
+        interfaces/IASTxxx
+        ast/ASTxxx
+    -Modifier (donc étendre) :
+        interfaces/IASTFactory
+        interfaces/IASTVisitor
+        ast/ASTFactory
+        parser/ilpml/ILPMLParser et ILPMLListener( lui ne extends pas on doit tout copier coller et modifier le extends avec la nouvelle grammaire)
+        
+    -Compiler :
+        compiler/ast/ASTCxxx si besoin
+        compiler/interfaces/IASTCxxx et IASTCvisitor si besoin
+        normalizer/Normalizzer INormalizationFactory et NormalizationFactory
+        compiler/Compiler et FreeVarianleCollector et GlobalVariableCollector
+        compiler/test/CompilerTest
+    Interpreter :
+        intepreter/Interpreter
+        interpreter/test/InterpreterTest
+        
+        
